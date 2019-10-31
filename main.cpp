@@ -41,8 +41,9 @@ int main(int argc, char* argv[]) {
 }
         ofstream myfile;
         myfile.open ("/Users/damym/datafortraining.txt");
+        myfile << "xs:" << endl;
     for(int j=0; j<steps; j++){
-        myfile << x[j] << endl;
+        myfile << x[j] << "," << endl;
     }
         myfile.close();
         return 0;

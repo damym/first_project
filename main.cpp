@@ -43,7 +43,11 @@ int main(int argc, char* argv[]) {
         myfile.open ("/Users/damym/datafortraining.txt");
         myfile << "xs:" << endl;
     for(int j=0; j<steps; j++){
-        myfile << x[j] << "," << endl;
+        if(j<steps-1){
+            myfile << " " << x[j] << "," ;
+        }
+        else
+            myfile << " " << x[j] ;
     }
         myfile.close();
         return 0;
